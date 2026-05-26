@@ -1,0 +1,2062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional Plumbing Solutions | Fishers, IN | (317) 476-6467</title>
+  <meta name="description" content="Professional Plumbing Solutions of Fishers — 100 Google reviews, 5.0 stars. Water heaters, drain cleaning, leak detection, sewer repair & more. Call (317) 476-6467." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <style>
+    /* =====================================================
+       CSS CUSTOM PROPERTIES
+    ===================================================== */
+    :root {
+      --brand-dark: #0d2137;
+      --brand-dark-rgb: 13, 33, 55;
+      --brand-mid: #163352;
+      --accent: #0d7c3d;
+      --accent-hover: #0a6331;
+      --accent-text: #ffffff;
+      --accent-rgb: 13, 124, 61;
+      --gold: #fbbf24;
+      --white: #ffffff;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-300: #d1d5db;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --gray-900: #111827;
+      --font-head: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --radius: 10px;
+      --shadow: 0 4px 24px rgba(var(--brand-dark-rgb), 0.10);
+      --shadow-lg: 0 8px 40px rgba(var(--brand-dark-rgb), 0.16);
+    }
+
+    /* =====================================================
+       RESET & BASE
+    ===================================================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      font-weight: 400;
+      color: var(--gray-700);
+      background: var(--white);
+      line-height: 1.6;
+    }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    /* =====================================================
+       ANIMATION UTILITIES
+    ===================================================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.10s; }
+    .reveal-delay-2 { transition-delay: 0.20s; }
+    .reveal-delay-3 { transition-delay: 0.30s; }
+    .reveal-delay-4 { transition-delay: 0.40s; }
+    .reveal-delay-5 { transition-delay: 0.50s; }
+    .reveal-delay-6 { transition-delay: 0.60s; }
+
+    /* =====================================================
+       LAYOUT HELPERS
+    ===================================================== */
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .section-label {
+      font-family: var(--font-head);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: var(--font-head);
+      font-size: clamp(1.75rem, 4vw, 2.6rem);
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--brand-dark);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+    .section-sub {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--gray-600);
+      max-width: 620px;
+      margin-top: 14px;
+    }
+
+    /* =====================================================
+       1. TOP BAR
+    ===================================================== */
+    .top-bar {
+      background: var(--brand-dark);
+      padding: 9px 0;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.75);
+    }
+    .top-bar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .top-bar a {
+      color: rgba(255,255,255,0.9);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .top-bar a:hover { color: var(--gold); }
+    .top-bar svg { width: 14px; height: 14px; flex-shrink: 0; }
+    .top-bar-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .top-bar-hours {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .top-bar-hours svg { width: 14px; height: 14px; }
+
+    /* =====================================================
+       2. NAVIGATION
+    ===================================================== */
+    .nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(var(--brand-dark-rgb),0.06);
+    }
+    .nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+    .nav-wordmark {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+    .nav-wordmark-top {
+      font-family: var(--font-head);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--brand-dark);
+    }
+    .nav-wordmark-main {
+      font-family: var(--font-head);
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .nav-wordmark-sub {
+      font-family: var(--font-head);
+      font-size: 0.58rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--brand-dark);
+      opacity: 0.65;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .nav-links a {
+      font-family: var(--font-head);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brand-dark);
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.25s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta {
+      background: var(--accent);
+      color: var(--white) !important;
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-family: var(--font-head);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: background 0.2s, transform 0.15s;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .nav-cta:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+    .nav-cta::after { display: none !important; }
+    .nav-cta svg { width: 15px; height: 15px; }
+    .nav-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+      color: var(--brand-dark);
+    }
+    .nav-hamburger svg { width: 24px; height: 24px; }
+
+    /* =====================================================
+       3. HERO
+    ===================================================== */
+    .hero {
+      background: var(--brand-dark);
+      position: relative;
+      overflow: hidden;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(105deg,
+        rgba(var(--brand-dark-rgb), 0.92) 0%,
+        rgba(var(--brand-dark-rgb), 0.80) 45%,
+        rgba(var(--brand-dark-rgb), 0.35) 100%
+      );
+      z-index: 1;
+    }
+    .hero .container {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 48px;
+      align-items: center;
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(var(--accent-rgb), 0.18);
+      border: 1px solid rgba(var(--accent-rgb), 0.4);
+      color: rgba(255,255,255,0.9);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 7px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+    .hero-badge svg { width: 13px; height: 13px; color: var(--gold); }
+    .hero-stars {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      margin-bottom: 6px;
+    }
+    .hero-stars svg {
+      width: 20px;
+      height: 20px;
+    }
+    .hero-stars-label {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      margin-left: 8px;
+      font-weight: 300;
+    }
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 18px;
+    }
+    .hero h1 span { color: var(--gold); }
+    .hero-tagline {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.80);
+      margin-bottom: 32px;
+      max-width: 500px;
+      line-height: 1.65;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: var(--accent);
+      color: var(--white);
+      font-family: var(--font-head);
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 16px 32px;
+      border-radius: 8px;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 16px rgba(var(--accent-rgb), 0.35);
+    }
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(var(--accent-rgb), 0.45);
+    }
+    .btn-primary svg { width: 18px; height: 18px; }
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: transparent;
+      color: var(--white);
+      font-family: var(--font-head);
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 15px 28px;
+      border-radius: 8px;
+      border: 2px solid rgba(255,255,255,0.35);
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-outline:hover {
+      border-color: rgba(255,255,255,0.7);
+      background: rgba(255,255,255,0.08);
+    }
+    .btn-outline svg { width: 18px; height: 18px; }
+    .hero-photo-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      overflow: hidden;
+      backdrop-filter: blur(4px);
+    }
+    .hero-photo-card img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+    }
+    .hero-photo-caption {
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .hero-photo-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+      animation: pulse-dot 2s infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(0.85); }
+    }
+    .hero-photo-caption span {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.7);
+      font-weight: 300;
+    }
+
+    /* =====================================================
+       4. SERVICES SECTION
+    ===================================================== */
+    .services {
+      padding: 96px 0;
+      background: var(--gray-50);
+    }
+    .services-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .services-header .section-sub {
+      margin: 14px auto 0;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.25s, box-shadow 0.25s;
+      cursor: default;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+    .service-card-img {
+      height: 200px;
+      overflow: hidden;
+    }
+    .service-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+    .service-card:hover .service-card-img img {
+      transform: scale(1.05);
+    }
+    .service-card-body {
+      padding: 24px;
+    }
+    .service-card-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(var(--accent-rgb), 0.10);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+    .service-card-icon svg {
+      width: 22px;
+      height: 22px;
+      color: var(--accent);
+    }
+    .service-card-title {
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--brand-dark);
+      margin-bottom: 8px;
+    }
+    .service-card-desc {
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: var(--gray-600);
+      line-height: 1.65;
+    }
+
+    /* =====================================================
+       5. AREA STATS
+    ===================================================== */
+    .stats {
+      background: var(--brand-dark);
+      padding: 72px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .stats::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      background: rgba(var(--accent-rgb), 0.06);
+      pointer-events: none;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+    .stat-item {
+      padding: 24px 16px;
+      border-right: 1px solid rgba(255,255,255,0.08);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-number {
+      font-family: var(--font-head);
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
+    }
+    .stat-label {
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.60);
+    }
+    .stat-sublabel {
+      font-size: 0.75rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.38);
+      margin-top: 4px;
+    }
+
+    /* =====================================================
+       6. WHY US
+    ===================================================== */
+    .why-us {
+      padding: 96px 0;
+      background: var(--white);
+    }
+    .why-us-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .why-us-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .why-card {
+      background: var(--gray-50);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      border-left: 3px solid var(--accent);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .why-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+    .why-card-icon {
+      width: 42px;
+      height: 42px;
+      background: rgba(var(--accent-rgb), 0.10);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+    .why-card-icon svg { width: 20px; height: 20px; color: var(--accent); }
+    .why-card-title {
+      font-family: var(--font-head);
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--brand-dark);
+      margin-bottom: 8px;
+    }
+    .why-card-desc {
+      font-size: 0.84rem;
+      font-weight: 300;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+    .why-us-content .section-sub {
+      margin-top: 14px;
+      margin-bottom: 28px;
+    }
+    .why-us-points {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+    .why-point {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: var(--gray-700);
+    }
+    .why-point svg { width: 17px; height: 17px; color: var(--accent); flex-shrink: 0; }
+
+    /* =====================================================
+       7. ABOUT
+    ===================================================== */
+    .about {
+      padding: 96px 0;
+      background: var(--brand-dark);
+      position: relative;
+      overflow: hidden;
+    }
+    .about::after {
+      content: 'PPS';
+      position: absolute;
+      right: -30px;
+      bottom: -40px;
+      font-family: var(--font-head);
+      font-size: 18rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.02);
+      letter-spacing: -0.05em;
+      pointer-events: none;
+      user-select: none;
+    }
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .about-img-wrap {
+      position: relative;
+    }
+    .about-img {
+      border-radius: 16px;
+      overflow: hidden;
+      height: 500px;
+    }
+    .about-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .about-badge {
+      position: absolute;
+      bottom: -24px;
+      right: -24px;
+      background: var(--accent);
+      color: var(--white);
+      border-radius: 14px;
+      padding: 20px 24px;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+    }
+    .about-badge-num {
+      font-family: var(--font-head);
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--white);
+    }
+    .about-badge-text {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.8);
+      margin-top: 4px;
+    }
+    .about-content .section-label { color: rgba(var(--accent-rgb), 0.9); }
+    .about-content .section-title { color: var(--white); }
+    .about-content .section-sub {
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 24px;
+    }
+    .about-body {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.65);
+      font-weight: 300;
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+    .about-values {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+    .about-value-tag {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.8);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 7px 14px;
+      border-radius: 100px;
+    }
+    .about-cta {
+      margin-top: 36px;
+    }
+
+    /* =====================================================
+       8. FAQ
+    ===================================================== */
+    .faq {
+      padding: 96px 0;
+      background: var(--gray-50);
+    }
+    .faq-inner {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 64px;
+      align-items: start;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .faq-item:first-child {
+      border-top: 1px solid var(--gray-200);
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 22px 0;
+      font-family: var(--font-head);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--brand-dark);
+      text-align: left;
+      transition: color 0.2s;
+    }
+    .faq-question:hover { color: var(--accent); }
+    .faq-icon { width: 20px; height: 20px; flex-shrink: 0; transition: transform 0.3s; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.3s;
+      font-size: 0.92rem;
+      font-weight: 300;
+      color: var(--gray-600);
+      line-height: 1.75;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+      padding-bottom: 20px;
+    }
+    .faq-side-img {
+      border-radius: 16px;
+      overflow: hidden;
+      height: 380px;
+      position: sticky;
+      top: 90px;
+    }
+    .faq-side-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .faq-header { margin-bottom: 40px; }
+
+    /* =====================================================
+       9. TESTIMONIALS
+    ===================================================== */
+    .testimonials {
+      padding: 96px 0;
+      background: var(--white);
+    }
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .testimonials-header .section-sub {
+      margin: 14px auto 0;
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .testimonial-card {
+      background: var(--gray-50);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      border-top: 3px solid var(--accent);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: transform 0.25s;
+    }
+    .testimonial-card:hover { transform: translateY(-4px); }
+    .testimonial-stars {
+      display: flex;
+      gap: 3px;
+    }
+    .testimonial-stars svg {
+      width: 17px;
+      height: 17px;
+    }
+    .testimonial-quote {
+      font-size: 1.2rem;
+      color: var(--accent);
+      line-height: 1;
+      font-family: Georgia, serif;
+    }
+    .testimonial-text {
+      font-size: 0.92rem;
+      font-weight: 300;
+      color: var(--gray-700);
+      line-height: 1.75;
+      flex: 1;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .testimonial-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--brand-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+    .testimonial-name {
+      font-family: var(--font-head);
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--brand-dark);
+    }
+    .testimonial-meta {
+      font-size: 0.75rem;
+      color: var(--gray-600);
+      font-weight: 300;
+      margin-top: 2px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .testimonial-meta svg { width: 12px; height: 12px; }
+    .testimonials-footer {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .google-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 100px;
+      padding: 10px 20px;
+      font-size: 0.82rem;
+      color: var(--gray-700);
+    }
+    .google-badge-stars {
+      display: flex;
+      gap: 2px;
+      align-items: center;
+    }
+    .google-badge-stars svg { width: 14px; height: 14px; }
+
+    /* =====================================================
+       10. BOTTOM CTA (Phone-Only)
+    ===================================================== */
+    .bottom-cta {
+      background: linear-gradient(135deg, var(--brand-mid) 0%, var(--brand-dark) 100%);
+      padding: 96px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .bottom-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .bottom-cta-inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .bottom-cta-label {
+      font-family: var(--font-head);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(var(--accent-rgb), 0.9);
+      margin-bottom: 16px;
+    }
+    .bottom-cta h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .bottom-cta-sub {
+      font-size: 1rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 40px;
+      line-height: 1.65;
+    }
+    .cta-phone-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .cta-phone-main {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 16px;
+      padding: 28px 40px;
+      backdrop-filter: blur(4px);
+    }
+    .cta-phone-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      animation: ring 3s infinite;
+    }
+    @keyframes ring {
+      0%, 90%, 100% { transform: rotate(0deg); }
+      92% { transform: rotate(12deg); }
+      94% { transform: rotate(-12deg); }
+      96% { transform: rotate(8deg); }
+      98% { transform: rotate(-8deg); }
+    }
+    .cta-phone-icon svg { width: 26px; height: 26px; color: var(--white); }
+    .cta-phone-info { text-align: left; }
+    .cta-phone-prompt {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 4px;
+    }
+    .cta-phone-number {
+      font-family: var(--font-head);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      line-height: 1;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .cta-phone-number:hover { color: var(--gold); }
+    .cta-phone-hours {
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.5);
+      margin-top: 4px;
+    }
+    .cta-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      color: rgba(255,255,255,0.30);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .cta-divider::before, .cta-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(255,255,255,0.15);
+    }
+    .cta-also {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,0.55);
+      font-size: 0.88rem;
+      font-weight: 300;
+    }
+    .cta-also svg { width: 16px; height: 16px; color: rgba(var(--accent-rgb), 0.8); }
+    .cta-also a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .cta-also a:hover { color: var(--white); }
+
+    /* =====================================================
+       11. FOOTER
+    ===================================================== */
+    .footer {
+      background: var(--brand-dark);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 64px 0 32px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-wordmark {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 16px;
+    }
+    .footer-wordmark-pps {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .footer-wordmark-full {
+      font-family: var(--font-head);
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-top: 3px;
+    }
+    .footer-tagline {
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+    .footer-contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      font-weight: 300;
+    }
+    .footer-contact-item svg {
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+      color: var(--accent);
+      margin-top: 2px;
+    }
+    .footer-contact-item a {
+      color: rgba(255,255,255,0.75);
+      transition: color 0.2s;
+    }
+    .footer-contact-item a:hover { color: var(--gold); }
+    .footer-col-title {
+      font-family: var(--font-head);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 18px;
+    }
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-links a {
+      font-size: 0.87rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.58);
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 28px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-copy {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.28);
+      font-weight: 300;
+    }
+    .footer-license {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.28);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .footer-license svg { width: 13px; height: 13px; }
+
+    /* =====================================================
+       MOBILE FIXED CTA
+    ===================================================== */
+    .mobile-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--brand-dark);
+      border-top: 2px solid var(--accent);
+      z-index: 200;
+      padding: 14px 20px;
+      align-items: center;
+      justify-content: center;
+    }
+    .mobile-cta a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--accent);
+      color: var(--white);
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 14px 0;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 400px;
+      text-decoration: none;
+    }
+    .mobile-cta svg { width: 18px; height: 18px; }
+
+    /* =====================================================
+       RESPONSIVE
+    ===================================================== */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+      .stat-item:nth-child(3), .stat-item:nth-child(4) { border-bottom: none; }
+      .why-us-inner { grid-template-columns: 1fr; gap: 40px; }
+      .about-inner { grid-template-columns: 1fr; gap: 48px; }
+      .about-img { height: 340px; }
+      .about-badge { bottom: -16px; right: 16px; }
+      .faq-inner { grid-template-columns: 1fr; }
+      .faq-side-img { display: none; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      body { padding-bottom: 72px; }
+      .mobile-cta { display: flex; }
+      .top-bar .container { justify-content: center; }
+      .top-bar-hours { display: none; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .hero .container {
+        grid-template-columns: 1fr;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        gap: 32px;
+      }
+      .hero-photo-card img { height: 300px; }
+      .hero h1 { font-size: 2rem; }
+      .services-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .why-us-cards { grid-template-columns: 1fr; }
+      .cta-phone-main { flex-direction: column; text-align: center; padding: 24px 20px; }
+      .cta-phone-info { text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .stats-grid { grid-template-columns: 1fr; }
+      .stat-item { border-bottom: 1px solid rgba(255,255,255,0.08); }
+      .stat-item:last-child { border-bottom: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================================================
+       1. TOP BAR
+  ================================================ -->
+  <div class="top-bar">
+    <div class="container">
+      <a href="tel:3174766467">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        (317) 476-6467
+      </a>
+      <div class="top-bar-right">
+        <span style="display:flex;align-items:center;gap:5px;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          13187 La Canada Blvd, Fishers, IN 46038
+        </span>
+        <span class="top-bar-hours" style="display:flex;align-items:center;gap:5px;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          Mon–Fri 8AM–5PM &nbsp;|&nbsp; Sat 8AM–12PM
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================
+       2. NAVIGATION
+  ================================================ -->
+  <nav class="nav">
+    <div class="container">
+      <a href="#hero" class="nav-wordmark" aria-label="Professional Plumbing Solutions Home">
+        <span class="nav-wordmark-top">Professional</span>
+        <span class="nav-wordmark-main">PPS</span>
+        <span class="nav-wordmark-sub">Plumbing Solutions &bull; Fishers, IN</span>
+      </a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="tel:3174766467" class="nav-cta">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          Call Now
+        </a>
+      </div>
+      <button class="nav-hamburger" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ================================================
+       3. HERO
+  ================================================ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img
+        src="https://plumbingconcepts.com/wp-content/uploads/2020/09/Types-of-Residential-Services-Professional-Plumbers-Provide--scaled.jpg"
+        alt="Professional plumber working on residential plumbing"
+        loading="eager"
+      />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-text reveal">
+        <div class="hero-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          100 Google Reviews &bull; 5.0 Stars
+        </div>
+        <div class="hero-stars" id="hero-stars-row">
+          <!-- Filled by JS -->
+        </div>
+        <h1>Fishers' Most Trusted<br /><span>Plumbing Experts</span></h1>
+        <p class="hero-tagline">
+          Customer Service Driven. Professional. Honest. Local. Reliable. Clean.<br />
+          Serving Fishers and the greater Indianapolis area with pride.
+        </p>
+        <div class="hero-actions">
+          <a href="tel:3174766467" class="btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            (317) 476-6467
+          </a>
+          <a href="#services" class="btn-outline">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            Our Services
+          </a>
+        </div>
+      </div>
+      <div class="hero-photo-card reveal reveal-delay-2">
+        <img
+          src="https://riteplumbingnyc.com/wp-content/uploads/2023/08/image2-1.jpg"
+          alt="Licensed plumber on the job in Fishers, Indiana"
+          width="420"
+          height="440"
+        />
+        <div class="hero-photo-caption">
+          <div class="hero-photo-dot"></div>
+          <span>Licensed &amp; Insured &bull; Fishers, IN 46038</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       4. SERVICES
+  ================================================ -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="services-header">
+        <p class="section-label reveal">What We Do</p>
+        <h2 class="section-title reveal reveal-delay-1">Residential Plumbing<br />Services We Offer</h2>
+        <p class="section-sub reveal reveal-delay-2">
+          From routine maintenance to urgent repairs, we handle every plumbing need with the same professionalism and attention to detail.
+        </p>
+      </div>
+      <div class="services-grid">
+
+        <!-- Water Heaters -->
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-card-img">
+            <img
+              src="https://www.perfecthomeservices.com/wp-content/uploads/2023/01/PERFECT-HOME-2021-BASEMENT-98-1500x1000-1.jpg"
+              alt="Water heater installation and repair"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-card-body">
+            <div class="service-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3 class="service-card-title">Water Heater Service</h3>
+            <p class="service-card-desc">Installation, repair, and replacement of traditional tank and tankless water heaters. We keep the hot water running in your home.</p>
+          </div>
+        </div>
+
+        <!-- Drain Cleaning -->
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-card-img">
+            <img
+              src="https://www.expresssewer.com/hs-fs/hubfs/AdobeStock_302067997%202.jpg?width=550&name=AdobeStock_302067997%202.jpg"
+              alt="Professional drain cleaning service"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-card-body">
+            <div class="service-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            </div>
+            <h3 class="service-card-title">Drain Cleaning</h3>
+            <p class="service-card-desc">Slow or blocked drains cleared fast. We use professional-grade equipment to eliminate clogs in kitchen, bath, and floor drains.</p>
+          </div>
+        </div>
+
+        <!-- Sewer Line -->
+        <div class="service-card reveal reveal-delay-3">
+          <div class="service-card-img">
+            <img
+              src="https://www.expresssewer.com/hs-fs/hubfs/plumbers%20conduct%20sewer%20line%20inspection%20.jpeg?width=600&height=400&name=plumbers%20conduct%20sewer%20line%20inspection%20.jpeg"
+              alt="Sewer line inspection and repair"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-card-body">
+            <div class="service-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="22" x2="12" y2="11"/><path d="M4.93 10.93 12 4l7.07 6.93"/><path d="M2 22h20"/></svg>
+            </div>
+            <h3 class="service-card-title">Sewer Line Repair</h3>
+            <p class="service-card-desc">Camera inspections, cleaning, and repair of residential sewer lines. We diagnose the root cause and fix it right the first time.</p>
+          </div>
+        </div>
+
+        <!-- Leak Detection -->
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-card-img">
+            <img
+              src="https://ljkruse.com/wp-content/uploads/2025/08/Screen-Shot-2025-08-21-at-9.19.31-PM.png"
+              alt="Leak detection and pipe repair"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-card-body">
+            <div class="service-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+            </div>
+            <h3 class="service-card-title">Leak Detection &amp; Repair</h3>
+            <p class="service-card-desc">Expert identification and repair of hidden pipe leaks, under-slab leaks, and water damage sources before they become expensive problems.</p>
+          </div>
+        </div>
+
+        <!-- Toilet -->
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-card-img">
+            <img
+              src="https://chapmanheating.com/wp-content/uploads/2024/04/toilet-repair-installation-indianapolis.webp"
+              alt="Toilet repair and installation"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-card-body">
+            <div class="service-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h12a2 2 0 0 1 2 2v6H4V4a2 2 0 0 1 2-2z"/><path d="M4 10h16v2a8 8 0 0 1-8 8 8 8 0 0 1-8-8v-2z"/><path d="M10 21v1"/><path d="M14 21v1"/></svg>
+            </div>
+            <h3 class="service-card-title">Toilet Repair &amp; Installation</h3>
+            <p class="service-card-desc">Running, rocking, or just tired toilets — we repair or replace them efficiently. New toilet installation handled cleanly from start to finish.</p>
+          </div>
+        </div>
+
+        <!-- Faucets & Fixtures -->
+        <div class="service-card reveal reveal-delay-3">
+          <div class="service-card-img">
+            <img
+              src="https://www.santhoffplumbingco.com/wp-content/uploads/2024/08/kitchen-sink-repair-650x464.webp"
+              alt="Faucet repair and installation service"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-card-body">
+            <div class="service-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3a2 2 0 0 0 0 4h14a2 2 0 0 0 0-4H5z"/><path d="M3 7v13a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7"/><path d="M12 12v5"/><path d="M9.5 14.5 12 12l2.5 2.5"/></svg>
+            </div>
+            <h3 class="service-card-title">Faucets &amp; Fixtures</h3>
+            <p class="service-card-desc">Dripping faucets, garbage disposals, kitchen and bathroom sink upgrades. No upselling — just honest work at fair prices.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       5. AREA STATS
+  ================================================ -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <div class="stat-number">100+</div>
+          <div class="stat-label">Google Reviews</div>
+          <div class="stat-sublabel">All 5-Star Verified</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-1">
+          <div class="stat-number">5.0</div>
+          <div class="stat-label">Star Rating</div>
+          <div class="stat-sublabel">Perfect Score on Google</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+          <div class="stat-number">Same Day</div>
+          <div class="stat-label">Response Available</div>
+          <div class="stat-sublabel">We Fit You In Fast</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+          <div class="stat-number">Licensed</div>
+          <div class="stat-label">&amp; Fully Insured</div>
+          <div class="stat-sublabel">INPHCC Member Contractor</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       6. WHY US
+  ================================================ -->
+  <section class="why-us" id="why-us">
+    <div class="container">
+      <div class="why-us-inner">
+        <div class="why-us-content reveal">
+          <p class="section-label">Why Choose PPS</p>
+          <h2 class="section-title">The PPS Difference</h2>
+          <p class="section-sub">
+            We've earned 100 perfect reviews because we treat every home and every customer with the same respect — honest pricing, quality materials, and work that lasts.
+          </p>
+          <div class="why-us-points">
+            <div class="why-point">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              No upselling — only what you actually need
+            </div>
+            <div class="why-point">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Fair, transparent pricing upfront
+            </div>
+            <div class="why-point">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Work area left clean — every single time
+            </div>
+            <div class="why-point">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              High-quality parts and materials used on every job
+            </div>
+          </div>
+          <a href="tel:3174766467" class="btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            Get a Free Estimate
+          </a>
+        </div>
+        <div class="why-us-cards">
+          <div class="why-card reveal reveal-delay-1">
+            <div class="why-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h4 class="why-card-title">Fully Licensed &amp; Insured</h4>
+            <p class="why-card-desc">Indiana licensed plumber and proud INPHCC member. Your home and peace of mind are protected.</p>
+          </div>
+          <div class="why-card reveal reveal-delay-2">
+            <div class="why-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h4 class="why-card-title">Fast Response Time</h4>
+            <p class="why-card-desc">We know plumbing problems can't wait. Larry calls back quickly and will fit you in — even on weekends.</p>
+          </div>
+          <div class="why-card reveal reveal-delay-3">
+            <div class="why-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h4 class="why-card-title">Honest, Fair Pricing</h4>
+            <p class="why-card-desc">No surprises on the invoice. We tell you what the job costs before we start — always.</p>
+          </div>
+          <div class="why-card reveal reveal-delay-4">
+            <div class="why-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h4 class="why-card-title">Locally Rooted</h4>
+            <p class="why-card-desc">We live and work in the Fishers community. Your neighbor, your plumber — invested in keeping this area great.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       7. ABOUT
+  ================================================ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-img-wrap reveal">
+          <div class="about-img">
+            <img
+              src="https://www.reynoldsep.com/assets/mainstage/parent-mainsatage-plumbing-bg.2601281215232.jpg"
+              alt="Larry Brown, owner of Professional Plumbing Solutions of Fishers"
+              loading="lazy"
+            />
+          </div>
+          <div class="about-badge">
+            <div class="about-badge-num">5.0</div>
+            <div class="about-badge-text">100 Google<br />Reviews</div>
+          </div>
+        </div>
+        <div class="about-content reveal reveal-delay-2">
+          <p class="section-label">Meet Your Plumber</p>
+          <h2 class="section-title" style="color:var(--white);">Larry Brown,<br />Owner &amp; Master Plumber</h2>
+          <p class="about-body">
+            I started Professional Plumbing Solutions because I believed Fishers homeowners deserved a plumber they could actually trust — someone who shows up when they say they will, explains the problem honestly, and doesn't pad the bill.
+          </p>
+          <p class="about-body">
+            I take personal pride in every job I take on. When you call PPS, you're not talking to a call center or getting a random tech — you're getting me, Larry, or one of my trained crew members who holds the same standards I do.
+          </p>
+          <p class="about-body">
+            Whether it's an emergency leak on a Saturday morning or a planned water heater upgrade, we treat your home the way we'd treat our own.
+          </p>
+          <div class="about-values">
+            <span class="about-value-tag">Customer First</span>
+            <span class="about-value-tag">Honest</span>
+            <span class="about-value-tag">Professional</span>
+            <span class="about-value-tag">Reliable</span>
+            <span class="about-value-tag">Clean</span>
+            <span class="about-value-tag">Local</span>
+          </div>
+          <div class="about-cta">
+            <a href="tel:3174766467" class="btn-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              Call Larry Directly
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       8. FAQ
+  ================================================ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="faq-inner">
+        <div>
+          <div class="faq-header reveal">
+            <p class="section-label">Common Questions</p>
+            <h2 class="section-title">Frequently Asked<br />Questions</h2>
+            <p class="section-sub" style="max-width:100%">Straight answers about how we work and what you can expect when you call PPS.</p>
+          </div>
+          <div class="faq-list reveal reveal-delay-1">
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How quickly can you respond?
+                <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </button>
+              <div class="faq-answer">
+                We typically respond to calls and messages the same day. Larry is known for calling back quickly — often within the hour. If you're dealing with an active leak or urgent situation, mention that and we'll do everything we can to get there fast, sometimes even the same day you call.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What areas around Fishers do you serve?
+                <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </button>
+              <div class="faq-answer">
+                We're based in Fishers and serve the surrounding Hamilton County and greater Indianapolis area — including Carmel, Noblesville, Westfield, Geist, McCordsville, and nearby communities. Not sure if we cover your area? Just call us at (317) 476-6467 and we'll let you know right away.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Are your plumbers licensed and insured?
+                <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </button>
+              <div class="faq-answer">
+                Yes, absolutely. Professional Plumbing Solutions is a licensed plumbing contractor in Indiana and a member of the Greater Indianapolis Plumbing Heating &amp; Cooling Contractors Association (INPHCC). We carry full liability insurance on every job to protect your home and give you total peace of mind.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Do you offer free estimates?
+                <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </button>
+              <div class="faq-answer">
+                We provide honest upfront pricing. For most jobs, we'll give you a clear estimate before any work begins so there are no surprises. We believe in transparency — if the scope changes once we open things up, we'll always tell you before we proceed.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What makes Professional Plumbing Solutions different?
+                <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </button>
+              <div class="faq-answer">
+                Our 100 five-star Google reviews say it better than we can, but the short answer is this: we treat every home like it's our own. No upselling. No unnecessary repairs. Larry Brown personally stands behind the work — and he's the kind of plumber who comes back to make things right without hesitation. That's why customers say "Larry is our plumber for life."
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="faq-side-img reveal reveal-delay-2">
+          <img
+            src="https://photos.peopleimages.com/picture/202302/2643147-hands-plumber-and-wrench-for-pipe-maintenance-and-repairs-blockage-and-installation-by-man-closeup.-plumbing-zoom-and-professional-handyman-fixing-drain-system-and-replace-with-tool-or-equipment-fit_400_400.jpg"
+            alt="Close-up of professional plumber at work"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       9. TESTIMONIALS
+  ================================================ -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="testimonials-header">
+        <p class="section-label reveal">Real Customers, Real Results</p>
+        <h2 class="section-title reveal reveal-delay-1">What Fishers Homeowners<br />Say About PPS</h2>
+        <p class="section-sub reveal reveal-delay-2">
+          100 five-star Google reviews and counting. Here's what your neighbors are saying.
+        </p>
+      </div>
+      <div class="testimonials-grid">
+
+        <!-- Review 1: Lisa Cuthbertson -->
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="testimonial-stars" data-stars="5"></div>
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">They are wonderful and will be our new go to for plumbing needs! After reaching out to them via Nextdoor, Larry called me right away and was booked for the day. After describing my issue he told me he was nearby and would stop and take a look so we wouldn't have a leaking toilet all weekend. He was able to quickly identify the issue and no more leaky toilet! So hard to find trustworthy service these days. Thanks PPS!</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">LC</div>
+            <div>
+              <div class="testimonial-name">Lisa Cuthbertson</div>
+              <div class="testimonial-meta">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Fishers, IN &bull; Google Review
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2: Jack Stelter -->
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="testimonial-stars" data-stars="5"></div>
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">Larry is very responsive and professional. He resolved a few different problems and knocked out a larger project in the past for us. He is honest and trustworthy, great experience overall!</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JS</div>
+            <div>
+              <div class="testimonial-name">Jack Stelter</div>
+              <div class="testimonial-meta">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Fishers, IN &bull; Google Review
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3: Keylene Moore -->
+        <div class="testimonial-card reveal reveal-delay-3">
+          <div class="testimonial-stars" data-stars="5"></div>
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">Super happy with the service! He came out the next day, fixed the problem quickly, and his pricing was very reasonable. Bonus points for the great sense of humor. Definitely recommend! Thanks Larry!</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">KM</div>
+            <div>
+              <div class="testimonial-name">Keylene Moore</div>
+              <div class="testimonial-meta">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Fishers, IN &bull; Google Review
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Extra reviews row -->
+      <div class="testimonials-grid" style="margin-top: 24px;">
+
+        <!-- Review 4: Mindy Armstrong -->
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="testimonial-stars" data-stars="5"></div>
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">Our first time using PPS Fishers and it was a great experience. Prompt response and fair pricing to repair a small leak in PVC pipe. Larry is our new plumber.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MA</div>
+            <div>
+              <div class="testimonial-name">Mindy Armstrong</div>
+              <div class="testimonial-meta">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Fishers, IN &bull; Google Review
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 5: Lyle Hunnicutt -->
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="testimonial-stars" data-stars="5"></div>
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">Professional Plumbing Solutions of Fishers was exactly as advertised. We received professional, courteous and timely service resolving our plumbing issue. I highly recommend this company.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">LH</div>
+            <div>
+              <div class="testimonial-name">Lyle Hunnicutt</div>
+              <div class="testimonial-meta">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Fishers, IN &bull; Google Review
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 6: Jill Pursell (from Locality) -->
+        <div class="testimonial-card reveal reveal-delay-3">
+          <div class="testimonial-stars" data-stars="5"></div>
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">I had a great experience with Larry Brown of Professional Plumbing Solutions. Very honest, straightforward and no upselling. Replaced the faucet quickly and left everything very clean. I would recommend them to anyone and will definitely call them again for any future plumbing needs.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JP</div>
+            <div>
+              <div class="testimonial-name">Jill Pursell</div>
+              <div class="testimonial-meta">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Fishers, IN &bull; Google Review
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="testimonials-footer reveal">
+        <div class="google-badge">
+          <div class="google-badge-stars" data-stars="5"></div>
+          <strong>5.0</strong> out of 5.0 &bull; <strong>100 Google Reviews</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       10. BOTTOM CTA (Phone Only)
+  ================================================ -->
+  <section class="bottom-cta" id="contact">
+    <div class="container">
+      <div class="bottom-cta-inner">
+        <p class="bottom-cta-label reveal">Ready to Get Started?</p>
+        <h2 class="reveal reveal-delay-1">Got a Plumbing Problem?<br />Let's Fix It Today.</h2>
+        <p class="bottom-cta-sub reveal reveal-delay-2">
+          Call Larry directly. We're responsive, honest, and we'll give you a straight answer — no runaround, no pressure.
+        </p>
+        <div class="cta-phone-block reveal reveal-delay-3">
+          <div class="cta-phone-main">
+            <div class="cta-phone-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <div class="cta-phone-info">
+              <div class="cta-phone-prompt">Call Us Now</div>
+              <a href="tel:3174766467" class="cta-phone-number">(317) 476-6467</a>
+              <div class="cta-phone-hours">Mon–Fri 8AM–5PM &bull; Sat 8AM–12PM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       11. FOOTER
+  ================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Wordmark + Info -->
+        <div>
+          <div class="footer-wordmark">
+            <span class="footer-wordmark-pps">PPS</span>
+            <span class="footer-wordmark-full">Professional Plumbing Solutions &bull; Fishers, Indiana</span>
+          </div>
+          <p class="footer-tagline">
+            Customer Service Driven. Professional. Honest. Local. Reliable. Clean.<br />
+            Serving Fishers and the greater Indianapolis area.
+          </p>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <a href="tel:3174766467">(317) 476-6467</a>
+            </div>
+            <div class="footer-contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              13187 La Canada Blvd, Fishers, IN 46038
+            </div>
+            <div class="footer-contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              Mon–Fri 8AM–5PM &bull; Sat 8AM–12PM
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2: Services -->
+        <div>
+          <p class="footer-col-title">Services</p>
+          <div class="footer-links">
+            <a href="#services">Water Heater Service</a>
+            <a href="#services">Drain Cleaning</a>
+            <a href="#services">Sewer Line Repair</a>
+            <a href="#services">Leak Detection</a>
+            <a href="#services">Toilet Repair &amp; Install</a>
+            <a href="#services">Faucets &amp; Fixtures</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Links -->
+        <div>
+          <p class="footer-col-title">Information</p>
+          <div class="footer-links">
+            <a href="#about">About Larry Brown</a>
+            <a href="#why-us">Why Choose PPS</a>
+            <a href="#testimonials">Customer Reviews</a>
+            <a href="#faq">FAQ</a>
+            <a href="tel:3174766467">Call Now</a>
+          </div>
+          <div style="margin-top: 28px;">
+            <p class="footer-col-title">Memberships</p>
+            <p style="font-size:0.82rem;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.65;">INPHCC Member &bull; Indiana Licensed Plumbing Contractor</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; 2026 Professional Plumbing Solutions of Fishers. All rights reserved.
+        </p>
+        <p class="footer-license">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Licensed &amp; Insured &bull; Fishers, IN 46038
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================================================
+       MOBILE FIXED CTA BAR
+  ================================================ -->
+  <div class="mobile-cta">
+    <a href="tel:3174766467">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      Call (317) 476-6467
+    </a>
+  </div>
+
+  <!-- ================================================
+       JAVASCRIPT
+  ================================================ -->
+  <script>
+    // ---- STAR RENDERING ----
+    function buildStarSVG(filled) {
+      const ns = 'http://www.w3.org/2000/svg';
+      const svg = document.createElementNS(ns, 'svg');
+      svg.setAttribute('viewBox', '0 0 24 24');
+      svg.setAttribute('width', '18');
+      svg.setAttribute('height', '18');
+      svg.style.fill = filled ? '#fbbf24' : 'none';
+      svg.style.stroke = '#fbbf24';
+      svg.style.strokeWidth = '1.5';
+      const poly = document.createElementNS(ns, 'polygon');
+      poly.setAttribute('points', '12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2');
+      svg.appendChild(poly);
+      return svg;
+    }
+
+    function fillStars(container, count) {
+      for (let i = 0; i < 5; i++) {
+        container.appendChild(buildStarSVG(i < count));
+      }
+    }
+
+    // Hero stars
+    const heroStarsRow = document.getElementById('hero-stars-row');
+    if (heroStarsRow) {
+      fillStars(heroStarsRow, 5);
+      const label = document.createElement('span');
+      label.className = 'hero-stars-label';
+      label.textContent = '5.0 · 100 Google Reviews';
+      heroStarsRow.appendChild(label);
+    }
+
+    // Testimonial stars
+    document.querySelectorAll('.testimonial-stars').forEach(function(el) {
+      const count = parseInt(el.getAttribute('data-stars'), 10) || 5;
+      fillStars(el, count);
+    });
+
+    // Google badge stars
+    document.querySelectorAll('.google-badge-stars').forEach(function(el) {
+      const count = parseInt(el.getAttribute('data-stars'), 10) || 5;
+      fillStars(el, count);
+    });
+
+    // ---- FAQ ACCORDION ----
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        // Close all
+        document.querySelectorAll('.faq-item.open').forEach(function(openItem) {
+          openItem.classList.remove('open');
+          openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        // Open clicked if it was closed
+        if (!isOpen) {
+          item.classList.add('open');
+          this.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // ---- INTERSECTION OBSERVER (reveal animations) ----
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach(function(el) {
+      revealObserver.observe(el);
+    });
+
+    // ---- SMOOTH NAV LINKS ----
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const offset = 80;
+          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // ---- OPEN FIRST FAQ ----
+    const firstFaq = document.querySelector('.faq-item');
+    if (firstFaq) {
+      firstFaq.classList.add('open');
+      firstFaq.querySelector('.faq-question').setAttribute('aria-expanded', 'true');
+    }
+  </script>
+
+</body>
+</html>
